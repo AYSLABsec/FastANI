@@ -24,7 +24,7 @@ fi
 # -------------------- SKANI TRIANGLE --------------------
 
 echo "🧠 Ejecutando skani (triangle)..."
-skani triangle -l genome_list.txt -o skani_output.tsv -t 2 || {
+skani triangle -l genome_list.txt -o skani_output.tsv -t 10 || {
     echo "❌ Error ejecutando skani. Abortando."
     exit 1
 }
@@ -41,7 +41,7 @@ fastANI --ql fastani_query_list.txt \
         --rl fastani_ref_list.txt \
         -o fastani_output.tsv \
         --fragLen 3000 \
-        -t 2 || {
+        -t 10 || {
     echo "❌ Error ejecutando fastANI. Abortando."
     exit 1
 }
